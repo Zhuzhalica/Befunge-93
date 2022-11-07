@@ -1,0 +1,21 @@
+
+Params:
+--help ~ -h - output help for working with the program in the console
+--path=[0] ~ -p=[0] - where [0] is absolute path to the code file
+--debug ~ -d - set the program's debug flag (if specified, flag =true, otherwise false)
+Examples:
+python befunge.py --help
+python befunge.py --path='C:\user\code.txt' -d
+
+Debug commands:
+Next - execute one step of the program
+End - executes the program to the end
+SetBreakpoint/SB (x y)/(this)- set breakpoint at point (x, y) or at this point (current coordinates)
+RemoveBreakpoint/RB (x y)/(this) - remove breakpoint (if it exists) from point (x, y) or this point (current coordinates)
+ToNextBreakpoint/TNB - go to the next breakpoint (if it exists) / stop at the first breakpoint encountered
+ToBreakpoint/TB (x y)/(this) - go to breakpoint (if it exists) that is at the point (x, y) or at this point (current coordinates)
+ToPoint/TP (x y)/(this) - go to a point that is at a point (x, y) or at this point (current coordinates) (breakpoints are not needed and are not being created)
+Examples:
+Next
+setbreakpoint 1 1
+SB this
